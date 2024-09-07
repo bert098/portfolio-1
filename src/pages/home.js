@@ -1,17 +1,23 @@
-import React from 'react';
-import '../style/homepage.css';
+import React from "react";
+import "../style/homepage.css";
+import profileImage from "../images/profilepic.jpg"
 
 const Home = () => {
   return (
-    <div className="homepage">
+    <div>
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Hi, I'm a Full Stack Developer</h1>
-          <p>
-            I build responsive, scalable web applications that solve real-world problems.
-          </p>
-          <a href="#contact" className="cta-button">Get in Touch</a>
+          <div className="hero-text">
+            <h1>Software Engineer, Web Developer, Mentor</h1>
+            <p>
+              Hey! My name is Robert Dumitru and I have experience building full-stack applications, working with modern frameworks, and solving complex problems. My passion is to develop efficient, scalable, and user-friendly solutions.
+            </p>
+            <a href="#contact" className="cta-button">Get in Touch</a>
+          </div>
+          <div className="hero-image">
+            <img src={profileImage} alt="Your Name" />
+          </div>
         </div>
       </section>
 
