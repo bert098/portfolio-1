@@ -1,0 +1,124 @@
+/* Navbar.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    width: 100%;
+    position: sticky;  /* Stays at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+    background-color: #333;  /* Dark background for the navbar */
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    font-size: 18px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* Ensure the text color stays readable */
+    border-radius: 4px;
+  }
+  
+  /* Responsive Design: Adjust navbar for mobile screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide the links on smaller screens */
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;  /* Below the logo */
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    /* Toggle menu button for mobile */
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  
+  .navbar-toggle {
+    display: none;  /* Hidden by default, will be displayed on smaller screens */
+    font-size: 24px;
+    color: #fff;
+  }
+
+  /* Additional styles for mobile toggle */
+.navbar-toggle {
+    display: none;  /* Hidden by default */
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Display the hamburger icon on small screens */
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: none;  /* Hidden initially */
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;  /* Below the navbar */
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links.open {
+      display: flex;  /* Display when menu is toggled open */
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
